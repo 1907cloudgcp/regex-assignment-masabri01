@@ -1,1 +1,119 @@
-this is my answer
+--grep Assignment. Data searched in text file: cities.txt
+#1: List the cities that start with letter "Z"
+--grep command:
+grep ^Z cities.txt
+--grep command output:
+Zaoshi
+Zhukeng
+Zhongxi
+Zwettl
+Zaragoza
+Zheshart
+Zhuji
+Zadvorsko
+Zhoujia
+
+#2: List the cities that end with the word "gan
+--grep command:
+grep gan$ cities.txt
+--grep command output:
+Tougan
+Pedaringan
+Banjar Sambangan
+Salingogan
+
+#3: List the cities that start with "A", "D" or "E"
+--grep command:
+grep ^[ADE] cities.txt
+--grep command output:
+Anticala
+Algés
+Detroit
+Dvinskoy
+Amassama
+Eucaliptus
+Anahanahana
+Ar Rawḑah
+Duancun
+Anina
+Ateleta
+Eskilstuna
+Akademgorodok
+Adela
+Atarodangwautu
+Dongfu
+Dan Sadau
+Arraial do Cabo
+El’brus
+Aubagne
+Domsjö
+Domampot
+Damāvand
+Al Ḩīlah
+Dimovo
+Dori
+Dalongtan
+Dagang
+Dongsheng
+Aanislag
+Doctor Juan León Mallorquín
+Ampeleíes
+Dřiteň
+Dijon
+Antofagasta
+Dorchester
+El Limon
+Esperantina
+Abricots
+Emiliano Zapata
+Dykan’ka
+Daleszyce
+Ar Rawḑah
+Dongchuan
+Danyang
+Dawan
+Erdaocha
+Artémida
+Alberton
+Denton
+Ayapa
+Dengzhuang
+Ambohitrolomahitsy
+--Count the number of cities
+--grep command:
+grep -c ^[ADE] cities.txt
+--grep command output:
+53
+
+#4: List the  cities that have 'a' as their second and 'r' as their third letters.
+--grep command
+grep -w .ar.* cities.txt
+--grep command output
+Farkaždin
+Saint-Laurent-du-Var
+Barra do Bugres
+Karanglincak
+Caraparac
+Paris 01
+Kardítsa
+Zaragoza
+Carmen
+Villa María
+Paris 14
+Carabamba
+Caraguatatuba
+Karolino-Buhaz
+Vargön
+Maruoka
+Varnávas
+Mariefred
+Sarov
+Karbinci
+Bajo Naranjillo
+Barão de Cocais
+
+#5: List the cities that don't start with 'C"
+--grep command:
+grep ^[^C].* cities.txt
+Count of cities that don't start with 'C':
+477
