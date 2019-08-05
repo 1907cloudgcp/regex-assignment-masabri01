@@ -117,3 +117,50 @@ Barão de Cocais
 grep ^[^C].* cities.txt
 Count of cities that don't start with 'C':
 477
+
+#6: List the cities that have at least 14 characters:
+--grep command:
+grep -iE '[^ ]{14}' cities.txt
+--grep command output:
+Saint-Laurent-du-Var
+Charlottenberg
+Atarodangwautu
+Salon-de-Provence
+Sendangkemulian
+Nishi-Tokyo-shi
+Karolino-Buhaz
+Saint-Quentin-en-Yvelines
+Challhuahuacho
+Chervonopartyzans’k
+Ambohitrolomahitsy
+
+#7: Count how many cities start with the letter "B":
+--grep command:
+grep -cx B.* cities.txt
+--grep command output:
+39
+
+#8: Count how many times the letter 'd' repeat:
+--grep command:
+grep -o d cities.txt | wc -l
+--grep command output:
+88
+
+#9: List the cities that end with the same letter twice:
+--grep command:
+grep -E '(.)\1$' cities.txt
+--grep command output:
+Izobil’nyy
+Invercargill
+Ingersoll
+Villa Gesell
+Ishii
+Ingersoll
+
+#10: List the palindrome cities with five characters:
+--grep command:
+grep -x '.\{5\}' cities.txt | grep -Eix '(.)(.)(.)\2\1'
+--grep command output:
+Anina
+Navan
+Noxon
